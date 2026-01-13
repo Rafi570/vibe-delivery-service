@@ -4,12 +4,13 @@ import { ThemeProvider, useTheme } from './context/ThemeContext';
 import { AuthProvider } from './context/AuthContext';
 import Home from './pages/Home';
 import Orders from './pages/Orders';
+import Parcels from './pages/Parcels';
 import Tracking from './pages/Tracking';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import About from './pages/About';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Parcels from './pages/Parcels';
 
 function AppContent() {
   const { isDark } = useTheme();
@@ -27,6 +28,7 @@ function AppContent() {
           <Route path="/" element={<Home />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/parcels" element={<Parcels />} />
+          <Route path="/about" element={<About />} />
           <Route path="/tracking/:id" element={<Tracking />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
